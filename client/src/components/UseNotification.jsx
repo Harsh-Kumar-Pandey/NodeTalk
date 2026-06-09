@@ -23,7 +23,7 @@ export function useNotification() {
   }, []);
 
   // For API calls - shows loading then auto-switches to timeout message after 30 seconds
-  const showApiLoadingWithTimeout = useCallback((loadingMessage = 'Loading...', timeoutMessage = 'Server is taking time, please keep calm...', timeoutMs = 30000) => {
+  const showApiLoadingWithTimeout = useCallback((loadingMessage = 'Loading...', timeoutMessage = 'Server is taking time, please keep calm...', timeoutMs = 4000) => {
     clearNotification();
     setNotification({ message: loadingMessage, type: 'loading' });
 
